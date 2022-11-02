@@ -31,8 +31,14 @@ header {
   margin-bottom: 3.9375rem;
 }
 
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .card {
-  border-bottom: 1px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow);
   border-radius: 6px;
   background: var(--bg-card);
   padding: 2rem 1.5rem;
