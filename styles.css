@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #121214;
+  --bg-card: #1d1c19;
+
+  --white: #e1e1e6;
+  --yellow: #f7dd43;
+}
+
+body {
+  background-color: var(--bg);
+  background-image: url("./assets/bg.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  font-family: "Roboto", sans-serif;
+}
+
+#app {
+  width: fit-content;
+  margin: 3.25rem auto;
+}
+
+header {
+  margin-bottom: 3.9375rem;
+}
+
+.card {
+  border-bottom: 1px solid var(--yellow);
+  border-radius: 6px;
+  background: var(--bg-card);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.card h2 {
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  border: 1px solid var(--yellow);
+  border-radius: 6px;
+
+  color: var(--yellow);
+}
+
+.card h2 span {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.card ul {
+  margin-top: 3.375rem;
+}
+
+.card li + li {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--white);
+}
+
+.card li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card li strong {
+  font-size: 36px;
+  color: var(--white);
+}
