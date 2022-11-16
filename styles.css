@@ -29,12 +29,23 @@ body {
 
 header {
   margin-bottom: 3.9375rem;
+  text-align: center;
 }
 
 #cards {
+  padding-inline: 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media (min-width: 700px) {
+  #cards {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 .card {
@@ -43,6 +54,10 @@ header {
   background: var(--bg-card);
   padding: 2rem 1.5rem;
   text-align: center;
+  min-width: 20rem;
+  flex: 0 0 20rem;
+
+  animation: appear 0.5s both;
 }
 
 .card h2 {
@@ -86,4 +101,21 @@ header {
 .card li strong {
   font-size: 36px;
   color: var(--white);
+}
+
+.card h2:hover,
+.card li strong:hover,
+.card li img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -41,6 +41,90 @@ const gameDays = [
       },
     ],
   },
+  {
+    day: "Segunda",
+    date: "21/11",
+    games: [
+      {
+        player1: "brazil",
+        hour: "08:00",
+        player2: "cameroon",
+      },
+      {
+        player1: "armenia",
+        hour: "13:00",
+        player2: "argentina",
+      },
+      {
+        player1: "colombia",
+        hour: "20:00",
+        player2: "japan",
+      },
+    ],
+  },
+  {
+    day: "Quarta",
+    date: "24/11",
+    games: [
+      {
+        player1: "british columbia",
+        hour: "08:00",
+        player2: "cameroon",
+      },
+      {
+        player1: "comoros",
+        hour: "13:00",
+        player2: "india",
+      },
+      {
+        player1: "armenia",
+        hour: "20:00",
+        player2: "hungary",
+      },
+    ],
+  },
+  {
+    day: "Segunda",
+    date: "21/11",
+    games: [
+      {
+        player1: "brazil",
+        hour: "08:00",
+        player2: "cameroon",
+      },
+      {
+        player1: "armenia",
+        hour: "13:00",
+        player2: "argentina",
+      },
+      {
+        player1: "colombia",
+        hour: "20:00",
+        player2: "japan",
+      },
+    ],
+  },
+  {
+    day: "Quarta",
+    date: "24/11",
+    games: [
+      {
+        player1: "british columbia",
+        hour: "08:00",
+        player2: "cameroon",
+      },
+      {
+        player1: "comoros",
+        hour: "13:00",
+        player2: "india",
+      },
+      {
+        player1: "armenia",
+        hour: "20:00",
+        player2: "hungary",
+      },
+    ],
+  },
 ]
 
 function createGame(game) {
@@ -53,9 +137,11 @@ function createGame(game) {
   `
 }
 
+let delay = 0
 function createCard(gameDay) {
+  delay += 0.2
   return `
-    <div class="card">
+    <div class="card" style="animation-delay: ${delay}s">
       <h2>${gameDay.date} <span>${gameDay.day}</span></h2>
       <ul>
         ${gameDay.games.map((game) => {
